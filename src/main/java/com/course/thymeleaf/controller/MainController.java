@@ -12,4 +12,11 @@ public class MainController {
         model.addAttribute("name", "Thymeleaf");
         return "home";
     }
+
+    @GetMapping("/elvis")
+    public String elvisExample(Model model){
+        model.addAttribute("isAdmin", false);
+        model.addAttribute("gender", "M");
+        return "elvis";
+    }
 }
